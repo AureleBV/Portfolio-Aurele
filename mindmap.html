@@ -1,0 +1,53 @@
+<html>
+<head>
+    <script src="https://unpkg.com/konva@9.2.0/konva.js"></script>
+    <meta charset="utf-8" />
+    <title>Mind Map</title>
+    <link rel="stylesheet" href="css/css/main.css"/>
+</head>
+<section class="bandeau">
+    <nav>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="Presentation%20Perso.html">Présentation Perso</a>
+            <a href="BTS%20SIO.html">BTS SIO</a>
+            <a href="Organisation.html">Organisation</a>
+            <a href="Contact.html">Contact</a>
+            <a class="active" href="mindmap.html">Mindmap</a>
+            <a class="active" href="CV%20Beauvieux%20Aurèle.pdf" download="CV%20Beauvieux%20Aurèle.pdf" target="_blank">Télécharger mon CV</a>
+        </div>
+    </nav>
+</section>
+<body>
+<nav id="submenu">
+    <div>
+        <section class="nommindmap">
+            <div class="nomMAP">
+                <label>Nom de la mind map  : </label>
+                <input type="text" id="className"/>
+            </div>
+        </section>
+
+        <div>
+            <span id="currentMode"></span>
+        </div>
+    </div>
+</nav>
+<div id="main" style="padding: 5px; display:flex; height:85vh">
+    <div class="containerMAP" id="container" style="border: 1px solid red;width:70%;overflow:hidden"></div>
+    <div id="menu" style="width:30%">
+        <div>Nom : <span id="nom"></span></div>
+        <form style="display:none" name="skill">
+            <div><label>Position horizontale : </label><input style="margin-right:10px;" type="number" oninput="majRect(this)" name="x"/></div>
+            <div><label>Position verticale : </label><input type="number" oninput="majRect(this)" name="y"/></div>
+        </form>
+    </div>
+</div>
+<div class="tooltipND" id="tooltip">
+
+</div>
+<script src="./config.js"></script>
+<script src="./mindmap.js"></script>
+<script src="./customScript.js"></script>
+</body>
+</html>

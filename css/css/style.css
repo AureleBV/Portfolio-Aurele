@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+	background-color: #6c757d;
+	font-family: Segoe UI;
+}
+#main{
+	padding : 5px;
+	display: flex;
+}
+
+#main > div{
+	margin : 10px;
+}
+
+#menu{
+	padding: 30px;
+}
+
+.ctxMenu{
+	background-color: #007bff;
+	animation: appear 0.5s;
+}
+
+.ctxMenu ul{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+.ctxMenu li{
+	border : 1px solid;
+	padding:10px;
+	transition: background-color 0.5s ease;
+	cursor:pointer;
+}
+
+.ctxMenu li:hover{
+	background-color:#00c3ff;
+}
+
+form{
+	display:flex;
+	flex-wrap:wrap;
+}
+form > *{
+	margin-bottom : 5px;
+}
+form > input, form > label,form > select{
+	width:50%
+}
+form > button{
+	width:100%;
+	margin : 10px 0px;
+}
+form > textarea{
+	width: 100%;
+	height : 150px
+}
+form > div{
+	width:50%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+nav{
+	color: white;
+	display:flex;
+	background-color:#007bff;
+	align-items:center;
+	padding: 1em 1em;
+}
+
+nav > a{
+	text-decoration : none;
+	color:white;
+}
+
+nav div{
+	max-width:100%;
+	display:inline-flex;
+	flex-grow : 1;
+	justify-content: space-evenly;
+}
+
+nav div a{
+	padding-left:1em;
+	padding-right:1em;
+	text-decoration : none;
+	color:white;
+}
+#submenu{
+	background-color:#888888;
+	padding:0.3em 0.8em;
+}
+#submenu div{
+	background-color:#888888;
+	justify-content: space-between;
+}
+#submenu > div > div{
+	width : 33vw;
+}
+#submenu > div > div:nth-child(1){
+	justify-content: flex-start;
+}
+#submenu > div > div:nth-child(2){
+	justify-content: center;
+}
+#submenu > div > div:nth-child(3){
+	justify-content: flex-end;
+}
+
+#submenu div input{
+	margin-left: 1em;
+}
+#submenu div > div{
+	background-color:#888888;
+	justify-content: flex-end;
+}
+
+#currentMode{
+	display: none;
+	padding : 0px 10px;
+	color : red;
+	background-color:white;
+}
+
+.tooltipND{
+	z-index:100;
+	background-color:#007bff;
+	padding : 10px;
+	border: 2px black solid;
+	animation: disappear 0.5s linear 0s 1;
+	display:none;
+}
+.tooltipD{
+	z-index:100;
+	background-color:#007bff;
+	padding : 10px;
+	border: 2px black solid;
+	animation: appear 0.2s linear 0s 1;
+}
+div > select{
+	max-width:200px;
+}
+@keyframes disappear{
+	0% {
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes appear{
+	0% {
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
